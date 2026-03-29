@@ -1,0 +1,52 @@
+# Traslochi Servizi - robots.txt
+User-agent: *
+Allow: /
+
+# Allow Google
+User-agent: Googlebot
+Allow: /
+
+# Allow ChatGPT / OpenAI (so we appear in AI answers)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Allow Bing / Microsoft Copilot
+User-agent: Bingbot
+Allow: /
+
+# Allow Google AI (Gemini)
+User-agent: Google-Extended
+Allow: /
+
+# Block known malicious bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+Sitemap: https://www.traslochiservizi.it/sitemap.xml
