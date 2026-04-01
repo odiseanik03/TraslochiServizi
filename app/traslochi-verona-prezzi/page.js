@@ -108,6 +108,7 @@ export default function Page() {
               <p className="subtitle" style={{ maxWidth: 760 }}>
                 Una pagina pensata per essere davvero utile: spiega da cosa dipende il costo di un trasloco,
                 quali differenze ci sono tra piccoli e grandi interventi e come ottenere un <strong style={{ textTransform: "uppercase" }}>preventivo gratuito</strong>
+                {" "}
                 senza pubblicare prezzi standard che potrebbero non riflettere il lavoro reale a Verona e provincia.
               </p>
             </div>

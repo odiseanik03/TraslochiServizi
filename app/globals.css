@@ -110,6 +110,8 @@ a {
 }
 
 .titleGradient {
+  display: inline-block;
+  padding-bottom: 0.08em;
   background: linear-gradient(
     135deg,
     var(--primary2) 0%,
