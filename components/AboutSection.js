@@ -18,8 +18,8 @@ export default function AboutSection() {
             Un servizio concreto, ordinato e professionale
           </motion.h2>
           <p className="subtitle">
-            Traslochi Servizi opera a Verona e zone limitrofe con un approccio pratico: sopralluogo quando serve, pianificazione
-            chiara e intervento pulito.
+            Traslochi Servizi opera a Verona e zone limitrofe con un approccio pratico: servizi di trasloco e sgombero,
+            sopralluogo quando serve, pianificazione chiara e intervento pulito.
           </p>
         </div>
 

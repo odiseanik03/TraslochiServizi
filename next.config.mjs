@@ -12,9 +12,6 @@ const nextConfig = {
     }
     return config;
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
 
   // ─── LAYER 1: Security Headers (production only) ───
   // In dev mode, security headers break LAN testing:

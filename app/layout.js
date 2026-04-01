@@ -7,11 +7,19 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.traslochiservi
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Traslochi e Sgomberi a Verona | Traslochi Servizi",
+    default: "Traslochi Servizi Verona | Traslochi e Sgomberi a Verona",
     template: "%s | Traslochi Servizi Verona",
   },
   description:
-    "Traslochi e sgomberi professionali a Verona e provincia. Svuotamento cantine, garage, soffitte e magazzini. Preventivi gratuiti, interventi rapidi 7 giorni su 7. Chiama ora.",
+    "Traslochi Servizi Verona offre traslochi, sgomberi e svuotamenti professionali a Verona e provincia. Cantine, garage, soffitte e magazzini. Preventivi gratuiti, interventi rapidi 7 giorni su 7.",
+  keywords: [
+    "traslochi servizi verona",
+    "traslochi verona",
+    "sgomberi verona",
+    "traslochi e sgomberi verona",
+    "servizi traslochi verona",
+    "ditta traslochi verona",
+  ],
   applicationName: "Traslochi Servizi",
   alternates: {
     canonical: "/",
@@ -32,9 +40,9 @@ export const metadata = {
     type: "website",
     locale: "it_IT",
     siteName: "Traslochi Servizi",
-    title: "Traslochi e Sgomberi Professionali a Verona | Traslochi Servizi",
+    title: "Traslochi Servizi Verona | Traslochi e Sgomberi Professionali",
     description:
-      "Servizio professionale di traslochi, sgomberi e svuotamenti a Verona e comuni limitrofi. Preventivi gratuiti, interventi rapidi, 7 giorni su 7.",
+      "Traslochi Servizi Verona: traslochi, sgomberi e svuotamenti professionali a Verona e comuni limitrofi. Preventivi gratuiti, interventi rapidi, 7 giorni su 7.",
     url: SITE_URL,
     images: [
       {
@@ -47,9 +55,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Traslochi e Sgomberi a Verona | Traslochi Servizi",
+    title: "Traslochi Servizi Verona | Traslochi e Sgomberi a Verona",
     description:
-      "Traslochi, sgomberi e svuotamenti professionali a Verona e provincia. Preventivi gratuiti.",
+      "Traslochi Servizi Verona: traslochi, sgomberi e svuotamenti professionali a Verona e provincia. Preventivi gratuiti.",
     images: ["/images/hero-image.jpeg"],
   },
   icons: {
@@ -86,8 +94,9 @@ export default function RootLayout({ children }) {
     "@type": "MovingCompany",
     "@id": `${siteUrl}/#organization`,
     name: "Traslochi Servizi",
+    alternateName: "Traslochi Servizi Verona",
     description:
-      "Traslochi, sgomberi e svuotamenti professionali a Verona e provincia. Oltre 35 anni di esperienza al servizio di privati e aziende.",
+      "Traslochi Servizi Verona offre traslochi, sgomberi e svuotamenti professionali a Verona e provincia. Oltre 35 anni di esperienza al servizio di privati e aziende.",
     url: siteUrl,
     telephone: "+393926900003",
     logo: `${siteUrl}/images/hero-image.jpeg`,
@@ -150,8 +159,10 @@ export default function RootLayout({ children }) {
       "https://schema.org/MovingCompany",
     ],
     knowsAbout: [
+      "Traslochi Servizi Verona",
       "Traslochi",
       "Sgomberi",
+      "Servizi di trasloco a Verona",
       "Traslochi e sgomberi a Verona",
       "Svuotamento cantine",
       "Svuotamento garage",
