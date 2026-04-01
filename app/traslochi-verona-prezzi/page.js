@@ -7,7 +7,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.traslochiservi
 export const metadata = {
   title: "Traslochi Verona Prezzi | Guida Costi e Preventivo Gratuito",
   description:
-    "Guida ai prezzi dei traslochi a Verona e provincia: fattori che incidono sui costi, fasce indicative e consigli pratici per ottenere un preventivo chiaro e gratuito.",
+    "Guida ai prezzi dei traslochi a Verona e provincia: fattori che incidono sui costi e consigli pratici per ottenere un preventivo chiaro e gratuito senza stime fuorvianti.",
   keywords: [
     "traslochi verona prezzi",
     "prezzi traslochi verona",
@@ -21,7 +21,7 @@ export const metadata = {
   openGraph: {
     title: "Traslochi Verona Prezzi | Guida Costi e Preventivo Gratuito",
     description:
-      "Scopri cosa incide sui prezzi dei traslochi a Verona, le fasce indicative di costo e come richiedere un preventivo gratuito senza sorprese.",
+      "Scopri cosa incide sui prezzi dei traslochi a Verona e come richiedere un preventivo gratuito senza sorprese e senza stime standardizzate.",
     url: `${SITE_URL}/traslochi-verona-prezzi`,
   },
 };
@@ -100,7 +100,7 @@ export default function Page() {
               <p className="subtitle" style={{ maxWidth: 760 }}>
                 Una pagina pensata per essere davvero utile: spiega da cosa dipende il costo di un trasloco,
                 quali differenze ci sono tra piccoli e grandi interventi e come ottenere un <strong>preventivo gratuito</strong>
-                senza sorprese a Verona e provincia.
+                senza pubblicare prezzi standard che potrebbero non riflettere il lavoro reale a Verona e provincia.
               </p>
             </div>
 
@@ -119,16 +119,18 @@ export default function Page() {
               <div style={cardStyle}>
                 <h2 className="cardTitle" style={{ marginTop: 0 }}>Piccoli traslochi</h2>
                 <p className="cardText" style={{ marginBottom: 10 }}>
-                  Per singoli mobili, pochi scatoloni o spostamenti rapidi in città, il costo è di solito più contenuto.
+                  Per singoli mobili, pochi scatoloni o spostamenti rapidi in città, il costo è in genere più semplice da gestire,
+                  ma cambia comunque in base ad accessi, tempi e organizzazione richiesta.
                 </p>
-                <p style={{ fontWeight: 800, color: "var(--primary)", margin: 0 }}>Fascia indicativa: da 150€ a 350€</p>
+                <p style={{ fontWeight: 800, color: "var(--primary)", margin: 0 }}>Valutazione su richiesta</p>
               </div>
               <div style={cardStyle}>
                 <h2 className="cardTitle" style={{ marginTop: 0 }}>Trasloco appartamento</h2>
                 <p className="cardText" style={{ marginBottom: 10 }}>
-                  Per un appartamento completo a Verona e provincia il prezzo varia in base a volume, accessi e servizi richiesti.
+                  Per un appartamento completo a Verona e provincia il prezzo varia in base a volume, accessi,
+                  presenza di ascensore, distanza e servizi richiesti.
                 </p>
-                <p style={{ fontWeight: 800, color: "var(--primary)", margin: 0 }}>Fascia indicativa: da 500€ a 1.200€+</p>
+                <p style={{ fontWeight: 800, color: "var(--primary)", margin: 0 }}>Preventivo personalizzato</p>
               </div>
               <div style={cardStyle}>
                 <h2 className="cardTitle" style={{ marginTop: 0 }}>Uffici e attività</h2>
@@ -142,7 +144,8 @@ export default function Page() {
             <div style={cardStyle}>
               <h2 className="cardTitle" style={{ marginTop: 0 }}>Nota importante sui prezzi</h2>
               <p className="cardText" style={{ marginBottom: 0 }}>
-                Le cifre sopra sono <strong>solo indicative</strong> e servono a orientarti. Il modo corretto per avere un costo reale
+                Ogni trasloco ha variabili diverse e il proprietario può dare importanza a dettagli specifici che cambiano
+                l'organizzazione del lavoro. Per questo non pubblichiamo cifre standard: il modo corretto per avere un costo reale
                 è richiedere un sopralluogo o descrivere con precisione il lavoro. In questo modo ricevi un preventivo chiaro,
                 coerente e adatto al tuo caso specifico.
               </p>
