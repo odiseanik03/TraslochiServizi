@@ -106,7 +106,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header style={styles.header}>
+    <header style={styles.header} className="siteHeader">
       <nav style={{ display: "contents" }} aria-label="Navigazione principale">
         <Link href="/" aria-label="Traslochi Servizi - Torna alla home" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
           <div
