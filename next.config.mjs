@@ -6,12 +6,6 @@ const nextConfig = {
     maxInactiveAge: 60 * 60 * 1000,
     pagesBufferLength: 5,
   },
-  webpack: (config, { dev }) => {
-    if (dev) {
-      config.cache = false;
-    }
-    return config;
-  },
 
   // ─── LAYER 1: Security Headers (production only) ───
   // In dev mode, security headers break LAN testing:
