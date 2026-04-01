@@ -3,7 +3,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.traslochiservi
 export const metadata = {
   title: "Traslochi Servizi Verona | Traslochi, Sgomberi e Svuotamenti a Verona",
   description:
-    "Preventivo gratuito per traslochi, sgomberi e svuotamenti a Verona e provincia. Traslochi Servizi Verona offre traslochi casa e ufficio, sgombero appartamenti, cantine, garage e magazzini con interventi rapidi 7 giorni su 7.",
+    "PREVENTIVO GRATUITO per traslochi, sgomberi e svuotamenti a Verona e provincia. Traslochi Servizi Verona offre traslochi casa e ufficio, sgombero appartamenti, cantine, garage e magazzini con interventi rapidi 7 giorni su 7.",
   keywords: [
     "traslochi servizi verona",
     "traslochi sgomberi servizi verona",
@@ -23,14 +23,14 @@ export const metadata = {
   openGraph: {
     title: "Traslochi Servizi Verona | Traslochi, Sgomberi e Svuotamenti a Verona",
     description:
-      "Preventivo gratuito per traslochi, sgomberi e svuotamenti a Verona e provincia. Servizi per case, uffici, appartamenti, cantine, garage e magazzini.",
+      "PREVENTIVO GRATUITO per traslochi, sgomberi e svuotamenti a Verona e provincia. Servizi per case, uffici, appartamenti, cantine, garage e magazzini.",
     url: SITE_URL,
   },
   twitter: {
     card: "summary_large_image",
     title: "Traslochi Servizi Verona | Traslochi, Sgomberi e Svuotamenti a Verona",
     description:
-      "Preventivo gratuito per traslochi, sgomberi e svuotamenti a Verona e provincia con interventi rapidi.",
+      "PREVENTIVO GRATUITO per traslochi, sgomberi e svuotamenti a Verona e provincia con interventi rapidi.",
   },
 };
 
