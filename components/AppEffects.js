@@ -13,10 +13,10 @@ export default function AppEffects({ children }) {
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={pathname}
-          initial={reduceMotion ? false : { opacity: 0, y: 6 }}
-          animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
-          exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: -6 }}
-          transition={{ duration: 0.35, ease: "easeOut" }}
+          initial={reduceMotion ? false : { opacity: 0 }}
+          animate={reduceMotion ? { opacity: 1 } : { opacity: 1 }}
+          exit={reduceMotion ? { opacity: 0 } : { opacity: 0 }}
+          transition={{ duration: 0.28, ease: "easeOut" }}
           style={{ position: "relative", zIndex: 0 }}
         >
           {children}

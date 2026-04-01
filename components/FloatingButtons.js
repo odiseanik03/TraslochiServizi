@@ -17,7 +17,7 @@ export default function FloatingButtons() {
         className="floatingBtn floatingBtnWhatsapp"
         aria-label="Contattaci via WhatsApp"
         title="WhatsApp"
-        whileHover={{ scale: 1.08 }}
+        whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.95 }}
       >
         <FaWhatsapp className="floatingSvg" aria-hidden="true" focusable={false} />
@@ -27,7 +27,7 @@ export default function FloatingButtons() {
         className="floatingBtn floatingBtnPhone"
         aria-label="Chiama ora"
         title="Chiama"
-        whileHover={{ scale: 1.08 }}
+        whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.95 }}
       >
         <FaPhoneAlt className="floatingSvg" aria-hidden="true" focusable={false} />
@@ -37,7 +37,7 @@ export default function FloatingButtons() {
         className="floatingBtn floatingBtnMessage"
         aria-label="Invia un messaggio"
         title="Messaggio"
-        whileHover={{ scale: 1.08 }}
+        whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.95 }}
       >
         <FaCommentDots className="floatingSvg" aria-hidden="true" focusable={false} />

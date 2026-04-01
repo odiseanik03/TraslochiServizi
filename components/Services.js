@@ -103,8 +103,8 @@ const Services = () => {
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              whileHover={{ y: -4 }}
-              transition={{ duration: 0.45, ease: "easeOut" }}
+              whileHover={{ scale: 1.01 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
             >
               <div
                 style={{

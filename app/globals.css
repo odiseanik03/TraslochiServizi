@@ -216,6 +216,39 @@ a {
   margin: 0;
 }
 
+.heroTitleFade,
+.heroLeadFade {
+  opacity: 0;
+  will-change: opacity;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .heroTitleFade {
+    animation: heroFadeOnly 420ms ease-out 40ms forwards;
+  }
+
+  .heroLeadFade {
+    animation: heroFadeOnly 420ms ease-out 130ms forwards;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroTitleFade,
+  .heroLeadFade {
+    opacity: 1;
+  }
+}
+
+@keyframes heroFadeOnly {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .heroAccent { color: var(--accent2); }
 
 /* Golden shimmer sweep on "rapidi" */
@@ -469,7 +502,7 @@ a {
   border: 1px solid transparent;
   cursor: pointer;
   user-select: none;
-  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease, border-color 200ms ease;
+  transition: transform 220ms ease-out, box-shadow 220ms ease-out, background-color 220ms ease-out, border-color 220ms ease-out;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -498,7 +531,7 @@ a {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .btn:hover { transform: translateY(-1px) scale(1.01); }
+  .btn:hover { transform: translateY(-1px) scale(1.006); }
   .btn:active { transform: translateY(0) scale(0.99); }
 }
 
@@ -533,7 +566,7 @@ a {
   box-shadow: var(--shadow2);
   position: relative;
   overflow: hidden;
-  transition: transform 280ms ease, border-color 400ms ease, box-shadow 400ms ease;
+  transition: transform 240ms ease-out, border-color 320ms ease-out, box-shadow 320ms ease-out;
 }
 
 .card::before {
@@ -544,13 +577,13 @@ a {
   background: radial-gradient(900px 280px at 12% 0%, rgba(139, 30, 63, 0.10), transparent 60%),
     radial-gradient(700px 260px at 90% 10%, rgba(176, 141, 87, 0.10), transparent 62%);
   opacity: 0;
-  transition: opacity 280ms ease;
+  transition: opacity 240ms ease-out;
 }
 
 /* Premium gold-to-burgundy border glow on hover */
 @media (prefers-reduced-motion: no-preference) {
   .card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     border-color: rgba(176, 141, 87, 0.35);
     box-shadow:
       0 18px 50px rgba(2, 6, 23, 0.12),

@@ -126,9 +126,9 @@ const Navbar = () => {
         <motion.div
           style={styles.navLinks}
           className="navbarDesktop"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.38, ease: "easeOut" }}
         >
           {navLinks.map((item) => (
             <Link key={item.href} href={item.href} style={styles.link} className="navLink">{item.label}</Link>
@@ -168,9 +168,9 @@ const Navbar = () => {
           {mobileMenuOpen && (
             <motion.div
               className="navbarMobilePanel"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               style={{ ...styles.mobilePanel, display: "flex" }}
             >
               {navLinks.map((item) => (
