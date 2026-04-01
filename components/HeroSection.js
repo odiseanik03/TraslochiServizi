@@ -12,6 +12,14 @@ const buttonVariants = {
   hover: { scale: 1.03, boxShadow: "0px 10px 20px rgba(0,0,0,0.22)" },
 };
 
+const heroTextFade = {
+  hidden: { opacity: 0 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    transition: { duration: 0.42, ease: "easeOut", delay },
+  }),
+};
+
 const WHATSAPP_PREFILL = encodeURIComponent(
   "Ciao Traslochi Servizi, vorrei un preventivo per trasloco/sgombero a Verona e zone limitrofe. Potete indicarmi disponibilità e costo? Grazie!"
 );
@@ -56,14 +64,26 @@ const HeroSection = () => {
         <div className="heroGrid">
           <div className="heroCopy">
             <div className="heroBadge">✓ Sempre <strong style={{ fontWeight: 900, textTransform: 'uppercase' }}>PREVENTIVO GRATUITO</strong> e prezzi onesti</div>
-            <h1 className="heroTitle heroTitleFade">
+            <motion.h1
+              className="heroTitle"
+              variants={heroTextFade}
+              initial="hidden"
+              animate="visible"
+              custom={0.03}
+            >
               Traslochi e Sgomberi
               <br />
               <span className="heroAccent heroShimmer">rapidi</span>, puliti, organizzati
-            </h1>
-            <p className="heroLead heroLeadFade">
+            </motion.h1>
+            <motion.p
+              className="heroLead"
+              variants={heroTextFade}
+              initial="hidden"
+              animate="visible"
+              custom={0.12}
+            >
               Sgomberi, traslochi e svuotamento cantine, soffitte e garage a Verona e provincia. Preventivi gratuiti, interventi rapidi, 7 giorni su 7.
-            </p>
+            </motion.p>
 
             {/* Desktop CTAs */}
             <div className="btnRow heroCtasDesktop" style={{ marginTop: 20 }}>

@@ -216,39 +216,6 @@ a {
   margin: 0;
 }
 
-.heroTitleFade,
-.heroLeadFade {
-  opacity: 0;
-  will-change: opacity;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .heroTitleFade {
-    animation: heroFadeOnly 420ms ease-out 40ms forwards;
-  }
-
-  .heroLeadFade {
-    animation: heroFadeOnly 420ms ease-out 130ms forwards;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .heroTitleFade,
-  .heroLeadFade {
-    opacity: 1;
-  }
-}
-
-@keyframes heroFadeOnly {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .heroAccent { color: var(--accent2); }
 
 /* Golden shimmer sweep on "rapidi" */
