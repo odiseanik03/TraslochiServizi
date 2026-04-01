@@ -35,7 +35,7 @@ const Footer = () => {
               Traslochi Servizi
             </h3>
             <p style={{ fontSize: "0.9rem", lineHeight: "1.55", opacity: "0.9" }}>
-              Traslochi, sgomberi e svuotamenti professionali a Verona e provincia. Ditta specializzata in traslochi e sgomberi da oltre 35 anni.
+              Traslochi Servizi Verona offre traslochi, sgomberi e svuotamenti professionali a Verona e provincia. Ditta specializzata in traslochi e sgomberi da oltre 35 anni.
             </p>
           </div>
 

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -25,6 +25,13 @@ const WHATSAPP_PREFILL = encodeURIComponent(
 );
 
 const HeroSection = () => {
+  const [heroTextVisible, setHeroTextVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setHeroTextVisible(true), 40);
+    return () => window.clearTimeout(timer);
+  }, []);
+
   return (
     <motion.section
       id="home"
@@ -64,26 +71,14 @@ const HeroSection = () => {
         <div className="heroGrid">
           <div className="heroCopy">
             <div className="heroBadge">✓ Sempre <strong style={{ fontWeight: 900, textTransform: 'uppercase' }}>PREVENTIVO GRATUITO</strong> e prezzi onesti</div>
-            <motion.h1
-              className="heroTitle"
-              variants={heroTextFade}
-              initial="hidden"
-              animate="visible"
-              custom={0.03}
-            >
+            <h1 className={`heroTitle heroTextReveal ${heroTextVisible ? "isVisible" : ""}`}>
               Traslochi e Sgomberi
               <br />
               <span className="heroAccent heroShimmer">rapidi</span>, puliti, organizzati
-            </motion.h1>
-            <motion.p
-              className="heroLead"
-              variants={heroTextFade}
-              initial="hidden"
-              animate="visible"
-              custom={0.12}
-            >
+            </h1>
+            <p className={`heroLead heroTextReveal heroTextRevealDelayed ${heroTextVisible ? "isVisible" : ""}`}>
               Sgomberi, traslochi e svuotamento cantine, soffitte e garage a Verona e provincia. Preventivi gratuiti, interventi rapidi, 7 giorni su 7.
-            </motion.p>
+            </p>
 
             {/* Desktop CTAs */}
             <div className="btnRow heroCtasDesktop" style={{ marginTop: 20 }}>

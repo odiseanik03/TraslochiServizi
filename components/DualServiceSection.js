@@ -20,9 +20,9 @@ const DualServiceSection = () => {
             Traslochi e sgomberi professionali a Verona
           </motion.h2>
           <p className="subtitle">
-            Traslochi Servizi è la ditta di riferimento a Verona e provincia per traslochi
+            Traslochi Servizi e la ditta di riferimento a Verona e provincia per traslochi
             residenziali e commerciali, sgomberi di ogni tipo di spazio e svuotamenti professionali.
-            Un unico interlocutore per entrambi i servizi.
+            Servizi completi di traslochi e sgomberi a Verona con un unico interlocutore per ogni esigenza.
           </p>
         </div>
 

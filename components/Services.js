@@ -91,7 +91,7 @@ const Services = () => {
             Traslochi, sgomberi e svuotamenti a Verona
           </motion.h2>
           <p className="subtitle">
-            Interventi professionali per privati e attività a Verona e in tutta la provincia. Ti guidiamo dalla prima chiamata al completamento del lavoro.
+            Traslochi Servizi Verona offre traslochi, sgomberi e svuotamenti professionali per privati e attività a Verona e in tutta la provincia. Ti guidiamo dalla prima chiamata al completamento del lavoro.
           </p>
         </div>
 

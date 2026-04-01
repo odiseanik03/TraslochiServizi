@@ -216,6 +216,29 @@ a {
   margin: 0;
 }
 
+.heroTextReveal {
+  opacity: 0;
+  transition: opacity 260ms ease-out;
+  will-change: opacity;
+}
+
+.heroTextReveal.heroTextRevealDelayed {
+  transition-duration: 300ms;
+  transition-delay: 70ms;
+}
+
+.heroTextReveal.isVisible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroTextReveal,
+  .heroTextReveal.heroTextRevealDelayed {
+    opacity: 1;
+    transition: none;
+  }
+}
+
 .heroAccent { color: var(--accent2); }
 
 /* Golden shimmer sweep on "rapidi" */
