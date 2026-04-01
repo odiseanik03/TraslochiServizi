@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+  visible: { opacity: 1, transition: { duration: 0.45, ease: "easeOut" } },
 };
 
 const buttonVariants = {
@@ -16,7 +16,15 @@ const heroTitleVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { duration: 0.9, ease: "easeOut", delay: 0.08 },
+    transition: { duration: 0.5, ease: "easeOut", delay: 0.03 },
+  },
+};
+
+const heroLeadVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.45, ease: "easeOut", delay: 0.12 },
   },
 };
 
@@ -74,9 +82,14 @@ const HeroSection = () => {
               <br />
               <span className="heroAccent heroShimmer">rapidi</span>, puliti, organizzati
             </motion.h1>
-            <p className="heroLead">
+            <motion.p
+              className="heroLead"
+              variants={heroLeadVariants}
+              initial="hidden"
+              animate="visible"
+            >
               Sgomberi, traslochi e svuotamento cantine, soffitte e garage a Verona e provincia. Preventivi gratuiti, interventi rapidi, 7 giorni su 7.
-            </p>
+            </motion.p>
 
             {/* Desktop CTAs */}
             <div className="btnRow heroCtasDesktop" style={{ marginTop: 20 }}>
