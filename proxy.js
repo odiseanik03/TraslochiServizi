@@ -110,32 +110,31 @@ const BLOCKED_PATHS = [
 
 // ─── LAYER 2c: Block SQL injection / XSS patterns in query strings ───
 const ATTACK_PATTERNS = [
-  /(\bunion\b.*\bselect\b)/i,     // SQL injection
-  /(\bselect\b.*\bfrom\b)/i,      // SQL injection
-  /(\bdrop\b.*\btable\b)/i,       // SQL injection
-  /(\binsert\b.*\binto\b)/i,      // SQL injection
-  /(\/\*|\*\/|--|;--)/,            // SQL comments
-  /(<script[\s>])/i,              // XSS
-  /(javascript\s*:)/i,            // XSS
-  /(on\w+\s*=\s*["'])/i,          // XSS event handlers
-  /(\balert\s*\()/i,              // XSS
-  /(document\.(cookie|location|write))/i, // XSS
-  /(eval\s*\()/i,                 // Code injection
-  /(\.\.\/)+(etc|proc|var)/i,     // Path traversal
-  /%00/,                          // Null byte injection
-  /%3Cscript/i,                   // Encoded XSS  /(<iframe[\s>])/i,              // iframe injection
-  /(<embed[\s>])/i,               // embed injection
-  /(<object[\s>])/i,              // object injection
-  /(<img[^>]+onerror)/i,          // img XSS
-  /(src\s*=\s*["']?javascript)/i, // javascript src
-  /(data\s*:\s*text\/html)/i,     // data URI injection
-  /(\bfetch\s*\()/i,              // fetch injection
-  /(\bXMLHttpRequest)/i,          // XHR injection
+  /(\bunion\b.*\bselect\b)/i,
+  /(\bselect\b.*\bfrom\b)/i,
+  /(\bdrop\b.*\btable\b)/i,
+  /(\binsert\b.*\binto\b)/i,
+  /(\/\*|\*\/|--;--|;--)/,
+  /(<script[\s>])/i,
+  /(javascript\s*:)/i,
+  /(on\w+\s*=\s*["'])/i,
+  /(\balert\s*\()/i,
+  /(document\.(cookie|location|write))/i,
+  /(eval\s*\()/i,
+  /(\.\.\/)+(etc|proc|var)/i,
+  /%00/,
+  /%3Cscript/i,
+  /(<embed[\s>])/i,
+  /(<object[\s>])/i,
+  /(<img[^>]+onerror)/i,
+  /(src\s*=\s*["']?javascript)/i,
+  /(data\s*:\s*text\/html)/i,
+  /(\bfetch\s*\()/i,
+  /(\bXMLHttpRequest)/i,
 ];
 
 // ─── LAYER 2d: Block porn / gambling / ad-injection spam ───
 const SPAM_KEYWORDS = [
-  // ── PORN / ADULT (100+) ──
   "porn", "porno", "pornhub", "porntube", "pornstar",
   "xxx", "xxxx", "xxxvideo", "xxxporn",
   "sex", "sexy", "sexcam", "sexchat", "sexdate", "sextube", "sexvideo",
@@ -159,8 +158,6 @@ const SPAM_KEYWORDS = [
   "barely-legal", "teen-porn", "lolita",
   "cuckold", "swinger", "orgy", "dogging",
   "boobs", "tits", "pussy", "cock", "cumshot",
-
-  // ── GAMBLING / BETTING (100+) ──
   "casino", "casinos", "online-casino", "live-casino",
   "poker", "pokerstar", "pokerstars", "texas-holdem",
   "slot", "slots", "slot-machine", "slotgame", "megaslot",
@@ -185,8 +182,6 @@ const SPAM_KEYWORDS = [
   "gg-bet", "ggbet", "melbet", "mostbet", "linebet",
   "parimatch", "marathon-bet", "vulkan-bet", "vulkanbet",
   "fairspin", "fortunejack", "bitstarz", "cloudbet",
-
-  // ── CRYPTO / FOREX SCAM (60+) ──
   "crypto-profit", "bitcoin-profit", "bitcoin-era", "bitcoin-code",
   "bitcoin-revolution", "bitcoin-trader", "bitcoin-loophole",
   "bitcoin-circuit", "bitcoin-prime", "bitcoin-up",
@@ -206,8 +201,6 @@ const SPAM_KEYWORDS = [
   "double-your-money", "guaranteed-return", "risk-free-profit",
   "financial-freedom-hack", "quit-your-job",
   "elon-musk-bitcoin", "celebrity-crypto",
-
-  // ── PHARMA SPAM (40+) ──
   "viagra", "cialis", "levitra", "kamagra", "sildenafil",
   "tadalafil", "vardenafil", "generic-viagra", "buy-viagra",
   "cheap-viagra", "viagra-online", "cialis-online",
@@ -221,8 +214,6 @@ const SPAM_KEYWORDS = [
   "hair-loss", "penis-enlargement", "male-enhancement",
   "breast-enlargement", "skin-whitening",
   "miracle-cure", "wonder-drug", "detox-scam",
-
-  // ── AD INJECTION / SPAM / SCAM (60+) ──
   "click-here", "click-now", "click-this",
   "free-download", "free-software", "free-gift",
   "you-won", "you-have-won", "winner-selected",
@@ -252,39 +243,33 @@ const SPAM_KEYWORDS = [
 
 // ─── LAYER 2e: Block suspicious referrers (spam/ad/porn referrer injection) ───
 const BLOCKED_REFERRERS = [
-  // Porn
   /porn/i, /xxx/i, /sex/i, /adult/i, /nude/i, /hentai/i,
   /escort/i, /camgirl/i, /onlyfans/i, /chaturbate/i,
   /xvideos/i, /xhamster/i, /xnxx/i, /redtube/i, /youporn/i,
   /livejasmin/i, /stripchat/i, /bongacams/i,
-  // Gambling
   /casino/i, /poker/i, /gambling/i, /betting/i,
   /1xbet/i, /bet365/i, /slots/i, /scommesse/i,
   /betway/i, /bwin/i, /unibet/i, /stake\.com/i,
   /mostbet/i, /melbet/i, /ggbet/i, /vulkanbet/i,
-  // Pharma
   /viagra/i, /cialis/i, /pharmacy/i, /kamagra/i,
-  // Scam / ad spam
   /click-here/i, /free-download/i, /you-won/i,
   /make-money/i, /get-rich/i, /crypto-profit/i,
   /bitcoin-profit/i, /binary-option/i,
-  // Known referrer spam domains
   /semalt\.com/i, /buttons-for-website/i, /darodar\.com/i,
   /social-buttons/i, /ilovevitaly/i, /hulfingtonpost/i,
   /econom\.co/i, /o-o-6-o-o\.com/i,
   /best-seo/i, /get-free-traffic/i, /buy-cheap/i,
   /event-tracking/i, /free-social-buttons/i,
-  /trafficmonetize/i, /webmonetizer/i, /floating-share/i,];
+  /trafficmonetize/i, /webmonetizer/i, /floating-share/i,
+];
 
-// ─── LAYER 3: Rate limiter ───
 const rateMap = new Map();
-const RATE_LIMIT = 80;          // max requests per window
-const RATE_WINDOW_MS = 60_000;  // 60 seconds
+const RATE_LIMIT = 80;
+const RATE_WINDOW_MS = 60_000;
 
-// Aggressive rate limit for IPs that hit blocked paths (honeypot trap)
 const suspiciousMap = new Map();
 const SUSPICIOUS_LIMIT = 5;
-const SUSPICIOUS_BAN_MS = 600_000; // 10-minute ban after 5 suspicious hits
+const SUSPICIOUS_BAN_MS = 600_000;
 
 function isRateLimited(ip) {
   const now = Date.now();
@@ -309,7 +294,7 @@ function markSuspicious(ip) {
     return false;
   }
 
-  if (record.banUntil > now) return true; // still banned
+  if (record.banUntil > now) return true;
 
   record.hits++;
   if (record.hits >= SUSPICIOUS_LIMIT) {
@@ -324,7 +309,6 @@ function isBanned(ip) {
   return record && record.banUntil > Date.now();
 }
 
-// Cleanup stale entries every 5 minutes
 if (typeof globalThis.__rateLimitCleanup === "undefined") {
   globalThis.__rateLimitCleanup = setInterval(() => {
     const now = Date.now();
@@ -337,12 +321,9 @@ if (typeof globalThis.__rateLimitCleanup === "undefined") {
   }, 300_000);
 }
 
-// ─── LAYER 4: Allowed HTTP methods ───
-// Site is fully static (no server forms) — only GET/HEAD/OPTIONS needed
 const ALLOWED_METHODS = new Set(["GET", "HEAD", "OPTIONS"]);
 
-export function middleware(request) {
-  // Skip all security checks in development — they break LAN testing
+export function proxy(request) {
   if (process.env.NODE_ENV !== "production") {
     return NextResponse.next();
   }
@@ -354,63 +335,51 @@ export function middleware(request) {
     request.headers.get("x-real-ip") ||
     "unknown";
 
-  // ── Layer 4: Block unusual HTTP methods (PUT, DELETE, PATCH, TRACE) ──
   if (!ALLOWED_METHODS.has(request.method)) {
     return new NextResponse("Method Not Allowed", { status: 405 });
   }
 
-  // ── Check if IP is banned from previous suspicious activity ──
   if (isBanned(ip)) {
     return new NextResponse("Forbidden", { status: 403 });
   }
 
-  // ── Layer 2: Block malicious bots ──
   const isBlockedBot = BLOCKED_BOTS.some((bot) => ua.includes(bot));
   if (isBlockedBot) {
     return new NextResponse("Forbidden", { status: 403 });
   }
 
-  // Block empty user-agents (almost always bots/scanners)
   if (!ua || ua.length < 5) {
     return new NextResponse("Forbidden", { status: 403 });
   }
 
-  // ── Layer 2b: Block attack path probes ──
-  const isBlockedPath = BLOCKED_PATHS.some(
-    (pattern) => pattern && pattern.test(pathname)
-  );
+  const isBlockedPath = BLOCKED_PATHS.some((pattern) => pattern && pattern.test(pathname));
   if (isBlockedPath) {
-    markSuspicious(ip); // track this IP as suspicious
+    markSuspicious(ip);
     return new NextResponse("Not Found", { status: 404 });
   }
 
-  // ── Layer 2c: Block SQL injection / XSS in query strings ──
   const fullUrl = pathname + search;
   let decodedUrl;
   try {
     decodedUrl = decodeURIComponent(fullUrl);
   } catch {
-    // Malformed URL encoding — likely an attack
     markSuspicious(ip);
     return new NextResponse("Bad Request", { status: 400 });
   }
-  const hasAttackPattern = ATTACK_PATTERNS.some((pattern) =>
-    pattern.test(decodedUrl)
-  );
+
+  const hasAttackPattern = ATTACK_PATTERNS.some((pattern) => pattern.test(decodedUrl));
   if (hasAttackPattern) {
     markSuspicious(ip);
     return new NextResponse("Forbidden", { status: 403 });
   }
 
-  // ── Layer 2d: Block porn/gambling/ad-spam keywords in URL ──
   const lowerUrl = decodedUrl.toLowerCase();
-  const hasSpamKeyword = SPAM_KEYWORDS.some((kw) => lowerUrl.includes(kw));
+  const hasSpamKeyword = SPAM_KEYWORDS.some((keyword) => lowerUrl.includes(keyword));
   if (hasSpamKeyword) {
     markSuspicious(ip);
     return new NextResponse("Forbidden", { status: 403 });
   }
 
-  // ── Layer 2e: Block suspicious referrers (porn/gambling/ad referrer spam) ──
   const referer = (request.headers.get("referer") || "").toLowerCase();
   if (referer) {
     const isBadReferrer = BLOCKED_REFERRERS.some((pattern) => pattern.test(referer));
@@ -420,7 +389,6 @@ export function middleware(request) {
     }
   }
 
-  // ── Layer 3: Rate limiting ──
   if (isRateLimited(ip)) {
     return new NextResponse("Too Many Requests", {
       status: 429,
@@ -428,11 +396,9 @@ export function middleware(request) {
     });
   }
 
-  // All clear — continue
   return NextResponse.next();
 }
 
-// Only run middleware on page routes & API, skip static assets
 export const config = {
   matcher: [
     "/((?!_next/static|_next/image|favicon\\.ico|images|animations|robots\\.txt|sitemap\\.xml).*)",
