@@ -61,9 +61,14 @@ export const metadata = {
     images: ["/images/hero-image.jpeg"],
   },
   icons: {
-    icon: "/images/traslochilogo.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/images/traslochilogo.png", sizes: "192x192", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
     apple: "/images/traslochilogo.png",
   },
+  manifest: "/site.webmanifest",
   formatDetection: {
     telephone: false,
   },
