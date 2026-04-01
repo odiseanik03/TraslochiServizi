@@ -7,7 +7,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.traslochiservi
 export const metadata = {
   title: "Checklist Trasloco Verona | Lista Completa da Seguire",
   description:
-    "Checklist completa per organizzare un trasloco a Verona senza stress: cosa fare prima, durante e dopo il trasferimento, con consigli pratici e preventivo gratuito.",
+    "Checklist utile per organizzare un trasloco a Verona in modo chiaro: verifica iniziale, sopralluogo, definizione del lavoro e consigli pratici dopo il trasferimento.",
   keywords: [
     "checklist trasloco verona",
     "guida trasloco verona",
@@ -20,7 +20,7 @@ export const metadata = {
   openGraph: {
     title: "Checklist Trasloco Verona | Lista Completa da Seguire",
     description:
-      "Una guida pratica per organizzare il trasloco a Verona: tempistiche, imballaggio, gestione documenti e consigli per ridurre stress e imprevisti.",
+      "Una guida pratica per organizzare il trasloco a Verona: verifica iniziale, sopralluogo, definizione del lavoro e consigli utili per gestire il trasferimento con chiarezza.",
     url: `${SITE_URL}/checklist-trasloco-verona`,
   },
 };
@@ -46,35 +46,35 @@ export default function Page() {
 
   const sections = [
     {
-      title: "2-3 settimane prima",
+      title: "Prima di definire il trasloco",
       items: [
-        "Fai una lista dei mobili e degli oggetti da trasferire.",
-        "Decidi cosa tenere, cosa vendere e cosa eliminare.",
-        "Richiedi il preventivo per il trasloco a Verona con anticipo.",
+        "Prepara un quadro chiaro dei mobili, degli oggetti e degli ambienti coinvolti.",
+        "Segnala fin da subito eventuali esigenze particolari, accessi difficili o materiali delicati.",
+        "Richiedi un primo contatto per fissare la verifica del lavoro con il responsabile.",
       ],
     },
     {
-      title: "1 settimana prima",
+      title: "Dopo il sopralluogo o la verifica",
       items: [
-        "Prepara scatole etichettate stanza per stanza.",
-        "Proteggi gli oggetti fragili con materiali adatti.",
-        "Tieni separati documenti, chiavi e oggetti di valore.",
+        "Definisci insieme al referente cosa va trasportato, cosa va smontato e cosa richiede più attenzione.",
+        "Organizza documenti, chiavi, effetti personali e oggetti di valore in modo separato.",
+        "Conferma solo dopo la verifica i dettagli davvero importanti per il proprietario e per il lavoro da svolgere.",
       ],
     },
     {
-      title: "Il giorno del trasloco",
+      title: "Quando il lavoro viene confermato",
       items: [
-        "Lascia libero il passaggio per il carico e lo scarico.",
-        "Verifica insieme alla squadra mobili, scatole e priorità.",
-        "Controlla che la nuova destinazione sia pronta a ricevere il materiale.",
+        "Lascia indicazioni chiare su accessi, priorità e ambienti da trattare con maggiore cura.",
+        "Verifica con la squadra i punti principali del lavoro già concordato con il responsabile.",
+        "Accertati che la destinazione finale sia pronta a ricevere mobili e materiali.",
       ],
     },
     {
-      title: "Dopo il trasloco",
+      title: "A lavoro concluso",
       items: [
-        "Inizia dalle stanze essenziali: cucina, bagno, camera.",
-        "Controlla mobili e scatole una volta consegnati.",
-        "Conserva la lista finale per verificare che sia arrivato tutto.",
+        "Controlla insieme al referente che quanto concordato sia stato eseguito correttamente.",
+        "Verifica mobili, scatole e materiali una volta completata la consegna.",
+        "Tieni nota di eventuali esigenze residue o interventi collegati, come sgomberi o smaltimenti.",
       ],
     },
   ];
@@ -100,8 +100,8 @@ export default function Page() {
                 Checklist trasloco Verona: la lista da seguire senza stress
               </h1>
               <p className="subtitle" style={{ maxWidth: 760 }}>
-                Una guida concreta e facile da condividere con clienti, partner, agenzie immobiliari e siti locali.
-                Più è utile, più ha probabilità di ricevere link naturali nel tempo.
+                Una guida concreta per capire come impostare correttamente un trasloco a Verona,
+                senza date standard o promesse generiche: i dettagli reali vengono sempre definiti dopo la verifica del responsabile.
               </p>
             </div>
 
@@ -123,6 +123,7 @@ export default function Page() {
               <p className="cardText" style={{ marginBottom: 0 }}>
                 Se il trasloco comprende anche mobili da eliminare o locali da liberare, conviene pianificare insieme
                 trasloco e sgombero: si risparmia tempo, si riducono passaggi inutili e si ha un unico referente operativo.
+                Anche in questo caso, la soluzione corretta si definisce solo dopo che la persona responsabile ha verificato il lavoro.
               </p>
             </div>
 
