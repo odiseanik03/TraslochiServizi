@@ -8,9 +8,9 @@ export default function ServicePage() {
       slug="sgombero-cantine-verona"
       title="Sgombero Cantine a Verona e Provincia"
       subtitle="Svuotamento cantine"
-      description="Svuotamento e sgombero cantine a Verona e nei comuni limitrofi. Rimozione di materiali ingombranti, vecchi mobili e oggetti accumulati nel tempo, anche in spazi con accessi difficili."
+      description="Svuotamento e sgombero cantine Verona e nei comuni limitrofi. Rimozione di materiali ingombranti, vecchi mobili e oggetti accumulati nel tempo, anche in spazi con accessi difficili."
       whatsappText="Ciao, vorrei un preventivo per uno sgombero cantina a Verona o zone limitrofe. Grazie!"
-      introText="La cantina è spesso il luogo dove si accumulano anni di oggetti inutilizzati. Se hai bisogno di <strong>sgomberare una cantina a Verona</strong>, ci pensiamo noi. Lavoriamo anche in spazi con accessi limitati, scale strette e soffitti bassi. Il risultato? Una cantina libera, pulita e riutilizzabile. Servizio disponibile a Verona città e in tutti i comuni della provincia. Offriamo anche <a href='/sgomberi-verona' style='color:var(--primary);font-weight:700'>sgomberi completi a Verona</a> e <a href='/traslochi-verona' style='color:var(--primary);font-weight:700'>traslochi professionali</a>."
+      introText="La cantina è spesso il luogo dove si accumulano anni di oggetti inutilizzati. Se hai bisogno di <strong>sgombero cantine Verona</strong> o di <strong>sgomberare una cantina a Verona</strong>, ci pensiamo noi. Lavoriamo anche in spazi con accessi limitati, scale strette e soffitti bassi. Il risultato? Una cantina libera, pulita e riutilizzabile. Servizio disponibile a Verona città e in tutti i comuni della provincia. Offriamo anche <a href='/sgomberi-verona' style='color:var(--primary);font-weight:700'>sgomberi completi a Verona</a> e <a href='/traslochi-verona' style='color:var(--primary);font-weight:700'>traslochi professionali</a>."
       details={[
         {
           title: "Accessi difficili e spazi stretti",

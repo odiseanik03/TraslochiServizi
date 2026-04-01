@@ -5,14 +5,22 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.traslochiservi
 export const metadata = {
   title: "Sgomberi a Verona e Provincia | Ditta Sgomberi Professionale",
   description:
-    "Ditta di sgomberi professionali a Verona e provincia: sgombero appartamenti, cantine, soffitte, garage e magazzini. Preventivi gratuiti, interventi rapidi e gestione completa. Anche servizio traslochi.",
+    "Ditta di sgomberi professionali a Verona e provincia: sgombero appartamenti, cantine, soffitte, garage e magazzini. PREVENTIVO GRATUITO, interventi rapidi e gestione completa. Anche servizio traslochi.",
+  keywords: [
+    "sgomberi verona",
+    "sgomberi verona gratis",
+    "sgombero verona",
+    "sgombero appartamenti verona",
+    "sgombero cantine verona",
+    "preventivo gratuito sgomberi verona",
+  ],
   alternates: {
     canonical: "/sgomberi-verona",
   },
   openGraph: {
     title: "Sgomberi a Verona e Provincia – Ditta Sgomberi e Traslochi Servizi",
     description:
-      "Sgomberi professionali a Verona: sgombero appartamenti, cantine, garage, soffitte, magazzini. Ditta sgomberi con preventivi gratuiti 7/7.",
+      "Sgomberi professionali a Verona: sgombero appartamenti, cantine, garage, soffitte e magazzini. PREVENTIVO GRATUITO 7/7 e interventi rapidi.",
     url: `${SITE_URL}/sgomberi-verona`,
   },
 };
@@ -51,6 +59,14 @@ export default function Page() {
         acceptedAnswer: {
           "@type": "Answer",
           text: "Il prezzo dipende dal tipo di locale, dalla quantità di materiale e dalla difficoltà degli accessi. Offriamo preventivi gratuiti e senza impegno.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Cercate sgomberi Verona gratis?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Se stai cercando 'sgomberi Verona gratis', il servizio viene valutato caso per caso, ma con Traslochi Servizi hai sempre un preventivo gratuito e senza impegno prima dell'intervento.",
         },
       },
       {

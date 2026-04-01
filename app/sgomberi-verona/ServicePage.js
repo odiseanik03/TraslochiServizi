@@ -10,7 +10,7 @@ export default function ServicePage() {
       subtitle="Sgomberi professionali"
       description="Servizio completo di sgomberi a Verona e in tutta la provincia. Sgomberiamo appartamenti, cantine, soffitte, garage, magazzini e locali commerciali con interventi rapidi, organizzati e trasparenti."
       whatsappText="Ciao, vorrei un preventivo per uno sgombero a Verona o zone limitrofe. Grazie!"
-      introText="Cerchi una <strong>ditta di sgomberi a Verona</strong> seria e affidabile? Traslochi Servizi è il punto di riferimento per lo sgombero di ogni tipo di spazio nella città di Verona e in tutta la provincia. Che si tratti di uno <a href='/sgomberi-appartamenti-verona' style='color:var(--primary);font-weight:700'>sgombero appartamenti</a>, una cantina piena di oggetti accumulati, un <a href='/svuotamento-garage-verona' style='color:var(--primary);font-weight:700'>garage ingombro</a> o un <a href='/svuotamento-magazzini-verona' style='color:var(--primary);font-weight:700'>magazzino commerciale</a>, ci occupiamo di tutto con metodo e professionalità. Operiamo 7 giorni su 7, con <strong>preventivi gratuiti</strong> e senza sorprese. Hai bisogno anche di un <a href='/traslochi-verona' style='color:var(--primary);font-weight:700'>trasloco a Verona</a>? Gestiamo anche quello."
+      introText="Cerchi una <strong>ditta di sgomberi a Verona</strong> seria e affidabile? Traslochi Servizi è il punto di riferimento per lo sgombero di ogni tipo di spazio nella città di Verona e in tutta la provincia. Che si tratti di uno <a href='/sgomberi-appartamenti-verona' style='color:var(--primary);font-weight:700'>sgombero appartamenti</a>, una cantina piena di oggetti accumulati, un <a href='/svuotamento-garage-verona' style='color:var(--primary);font-weight:700'>garage ingombro</a> o un <a href='/svuotamento-magazzini-verona' style='color:var(--primary);font-weight:700'>magazzino commerciale</a>, ci occupiamo di tutto con metodo e professionalità. Se stai cercando <strong>sgomberi Verona gratis</strong>, sappi che con noi hai sempre <strong>PREVENTIVO GRATUITO</strong> e senza impegno, con valutazione chiara del lavoro prima dell'intervento. Hai bisogno anche di un <a href='/traslochi-verona' style='color:var(--primary);font-weight:700'>trasloco a Verona</a>? Gestiamo anche quello."
       details={[
         {
           title: "Sgombero appartamenti a Verona",
@@ -45,6 +45,10 @@ export default function ServicePage() {
         {
           q: "Quanto costa uno sgombero a Verona?",
           a: "Il prezzo dipende dal tipo di locale, dalla quantità di materiale e dalla difficoltà degli accessi. Offriamo preventivi gratuiti e senza impegno.",
+        },
+        {
+          q: "Offrite anche sgomberi Verona gratis?",
+          a: "Lo sgombero viene sempre valutato in base al lavoro richiesto, ma con Traslochi Servizi hai sempre un PREVENTIVO GRATUITO e senza impegno prima di decidere.",
         },
         {
           q: "Siete disponibili anche nel weekend per gli sgomberi?",

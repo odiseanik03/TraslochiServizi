@@ -5,14 +5,23 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.traslochiservi
 export const metadata = {
   title: "Traslochi a Verona e Provincia | Ditta Traslochi Professionali",
   description:
-    "Ditta di traslochi professionali a Verona e provincia. Traslochi economici per casa, ufficio e attività. Preventivi gratuiti, protezione arredi, 7 giorni su 7. Anche servizio sgomberi.",
+    "Ditta di traslochi professionali a Verona e provincia. Traslochi economici, piccoli traslochi e traslochi per casa, ufficio e attività. Preventivi gratuiti, prezzi chiari, protezione arredi e interventi 7 giorni su 7.",
+  keywords: [
+    "traslochi verona",
+    "traslochi verona prezzi",
+    "traslochi verona e provincia",
+    "traslochi economici verona",
+    "piccoli traslochi verona",
+    "traslochi casa verona",
+    "traslochi ufficio verona",
+  ],
   alternates: {
     canonical: "/traslochi-verona",
   },
   openGraph: {
     title: "Traslochi a Verona e Provincia – Ditta Traslochi Servizi",
     description:
-      "Traslochi professionali ed economici a Verona e provincia: casa, ufficio, piccoli spostamenti. Ditta traslochi con preventivi gratuiti e interventi rapidi 7/7.",
+      "Traslochi professionali ed economici a Verona e provincia: casa, ufficio, piccoli traslochi e piccoli spostamenti. Prezzi chiari, preventivi gratuiti e interventi rapidi 7/7.",
     url: `${SITE_URL}/traslochi-verona`,
   },
 };
@@ -43,6 +52,14 @@ export default function Page() {
         acceptedAnswer: {
           "@type": "Answer",
           text: "Il costo dipende dalla quantità di mobili, dalla distanza e dal piano. Offriamo preventivi gratuiti e senza impegno. Contattaci per un preventivo personalizzato.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Fate anche piccoli traslochi a Verona?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Sì, realizziamo anche piccoli traslochi a Verona e provincia, oltre a piccoli spostamenti di mobili, elettrodomestici e arredi singoli con preventivo gratuito.",
         },
       },
       {

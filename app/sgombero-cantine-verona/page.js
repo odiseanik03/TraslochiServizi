@@ -5,14 +5,20 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.traslochiservi
 export const metadata = {
   title: "Sgombero Cantine a Verona | Svuotamento Rapido e Ordinato",
   description:
-    "Sgombero e svuotamento cantine a Verona e provincia. Rimozione di mobili vecchi, materiali ingombranti e oggetti accumulati. Lavoriamo anche in spazi difficili. Preventivi gratuiti.",
+    "Sgombero cantine Verona e provincia con svuotamento rapido e ordinato. Rimozione di mobili vecchi, materiali ingombranti e oggetti accumulati, anche in spazi difficili. Preventivi gratuiti.",
+  keywords: [
+    "sgombero cantine verona",
+    "sgombero cantine verona provincia",
+    "svuotamento cantine verona",
+    "sgombero cantina verona",
+  ],
   alternates: {
     canonical: "/sgombero-cantine-verona",
   },
   openGraph: {
     title: "Sgombero Cantine a Verona – Traslochi Servizi",
     description:
-      "Svuotamento cantine a Verona e provincia. Rimozione ingombranti in spazi difficili, gestione ordinata, preventivi gratuiti.",
+      "Sgombero cantine Verona e provincia con rimozione ingombranti in spazi difficili, gestione ordinata e preventivi gratuiti.",
     url: `${SITE_URL}/sgombero-cantine-verona`,
   },
 };
