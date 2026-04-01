@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const containerVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
 const buttonVariants = {
@@ -13,10 +13,9 @@ const buttonVariants = {
 };
 
 const heroTitleVariants = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    y: 0,
     transition: { duration: 0.9, ease: "easeOut", delay: 0.08 },
   },
 };
