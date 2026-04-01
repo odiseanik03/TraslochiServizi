@@ -57,12 +57,12 @@ const HeroSection = () => {
           <div className="heroCopy">
             <div className="heroBadge">✓ Sempre <strong style={{ fontWeight: 900, textTransform: 'uppercase' }}>PREVENTIVO GRATUITO</strong> e prezzi onesti</div>
             <h1 className="heroTitle">
-              Traslochi Servizi Verona
+              Traslochi e Sgomberi
               <br />
-              <span className="heroAccent heroShimmer">traslochi e sgomberi</span> rapidi, puliti, organizzati.
+              <span className="heroAccent heroShimmer">rapidi</span>, puliti, organizzati.
             </h1>
             <p className="heroLead">
-              Traslochi Servizi Verona offre traslochi, sgomberi e svuotamento di cantine, soffitte, garage e magazzini a Verona e provincia. Preventivi gratuiti, interventi rapidi, 7 giorni su 7.
+              Sgomberi, traslochi e svuotamento cantine, soffitte e garage a Verona e provincia. Preventivi gratuiti, interventi rapidi, 7 giorni su 7.
             </p>
 
             {/* Desktop CTAs */}

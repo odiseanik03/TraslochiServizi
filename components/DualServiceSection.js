@@ -108,9 +108,10 @@ const DualServiceSection = () => {
               <h3 className="cardTitle" style={{ margin: 0 }}>Sgomberi a Verona</h3>
             </div>
             <p className="cardText" style={{ lineHeight: 1.7 }}>
-              Ci occupiamo di <strong>sgomberi professionali</strong> a Verona e provincia:
-              sgombero appartamenti, cantine, soffitte, garage e magazzini. Servizio completo con
-              gestione dei materiali, pulizia finale e smaltimento quando necessario. Interventi
+              Ci occupiamo di <strong>traslochi e sgomberi professionali</strong> a Verona e
+              provincia: traslochi di case, uffici e piccoli spostamenti, oltre a sgombero
+              appartamenti, cantine, soffitte, garage e magazzini. Servizio completo con gestione
+              dei materiali, protezione degli arredi, pulizia finale e organizzazione rapida,
               anche in giornata.
             </p>
             <div style={{ marginTop: 14, display: "flex", flexWrap: "wrap", gap: 8 }}>

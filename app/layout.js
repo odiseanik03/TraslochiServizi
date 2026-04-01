@@ -177,9 +177,15 @@ export default function RootLayout({ children }) {
     "@type": "WebSite",
     "@id": `${siteUrl}/#website`,
     name: "Traslochi Servizi",
+    alternateName: "Traslochi Servizi Verona",
     url: siteUrl,
     publisher: { "@id": `${siteUrl}/#organization` },
     inLanguage: "it-IT",
+    about: [
+      "Traslochi servizi Verona",
+      "Traslochi a Verona",
+      "Sgomberi a Verona",
+    ],
     potentialAction: {
       "@type": "SearchAction",
       target: `${siteUrl}/?q={search_term_string}`,
