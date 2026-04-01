@@ -7,7 +7,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.traslochiservi
 export const metadata = {
   title: "Traslochi Verona Prezzi | Guida Costi e Preventivo Gratuito",
   description:
-    "Guida ai prezzi dei traslochi a Verona e provincia: fattori che incidono sui costi e consigli pratici per ottenere un preventivo chiaro e gratuito senza stime fuorvianti.",
+    "Guida ai prezzi dei traslochi a Verona e provincia: fattori che incidono sui costi e come ottenere un PREVENTIVO GRATUITO chiaro, rapido e senza stime fuorvianti.",
   keywords: [
     "traslochi verona prezzi",
     "prezzi traslochi verona",
@@ -21,7 +21,7 @@ export const metadata = {
   openGraph: {
     title: "Traslochi Verona Prezzi | Guida Costi e Preventivo Gratuito",
     description:
-      "Scopri cosa incide sui prezzi dei traslochi a Verona e come richiedere un preventivo gratuito senza sorprese e senza stime standardizzate.",
+      "Scopri cosa incide sui prezzi dei traslochi a Verona e come richiedere un PREVENTIVO GRATUITO senza sorprese e senza stime standardizzate.",
     url: `${SITE_URL}/traslochi-verona-prezzi`,
   },
 };
@@ -73,6 +73,14 @@ export default function Page() {
           text: "No, con Traslochi Servizi il preventivo è gratuito e senza impegno, così puoi valutare tempi, organizzazione e costi con chiarezza prima di decidere.",
         },
       },
+      {
+        "@type": "Question",
+        name: "Come posso ricevere velocemente un preventivo per i prezzi?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Per i prezzi del tuo trasloco a Verona puoi contattarci direttamente su WhatsApp. Rispondiamo in massimo 10 minuti e ti aiutiamo a capire subito quali informazioni servono per un preventivo gratuito e preciso.",
+        },
+      },
     ],
   };
 
@@ -99,9 +107,21 @@ export default function Page() {
               </h1>
               <p className="subtitle" style={{ maxWidth: 760 }}>
                 Una pagina pensata per essere davvero utile: spiega da cosa dipende il costo di un trasloco,
-                quali differenze ci sono tra piccoli e grandi interventi e come ottenere un <strong>preventivo gratuito</strong>
+                quali differenze ci sono tra piccoli e grandi interventi e come ottenere un <strong style={{ textTransform: "uppercase" }}>preventivo gratuito</strong>
                 senza pubblicare prezzi standard che potrebbero non riflettere il lavoro reale a Verona e provincia.
               </p>
+            </div>
+
+            <div style={{ ...cardStyle, display: "grid", gap: 12, background: "linear-gradient(135deg, rgba(139, 30, 63, 0.08), rgba(176, 141, 87, 0.12))" }}>
+              <h2 className="cardTitle" style={{ margin: 0 }}>PREVENTIVO GRATUITO in modo rapido</h2>
+              <p className="cardText" style={{ marginBottom: 0 }}>
+                Per i prezzi contattaci su WhatsApp al <strong>+39 392 690 0003</strong>: rispondiamo in massimo 10 minuti
+                e ti aiutiamo a capire subito le informazioni utili per un preventivo corretto, senza cifre casuali.
+              </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+                <a className="btn btnPrimary" href="https://wa.me/393926900003?text=Ciao%2C%20vorrei%20un%20preventivo%20gratuito%20per%20un%20trasloco%20a%20Verona." target="_blank" rel="noreferrer">Scrivici su WhatsApp</a>
+                <a className="btn btnSecondary" href="tel:+393926900003">Chiama ora</a>
+              </div>
             </div>
 
             <div style={{ ...cardStyle, display: "grid", gap: 16 }}>
@@ -146,7 +166,7 @@ export default function Page() {
               <p className="cardText" style={{ marginBottom: 0 }}>
                 Ogni trasloco ha variabili diverse e il proprietario può dare importanza a dettagli specifici che cambiano
                 l'organizzazione del lavoro. Per questo non pubblichiamo cifre standard: il modo corretto per avere un costo reale
-                è richiedere un sopralluogo o descrivere con precisione il lavoro. In questo modo ricevi un preventivo chiaro,
+                è richiedere un <strong style={{ textTransform: "uppercase" }}>preventivo gratuito</strong>, fare un sopralluogo o descrivere con precisione il lavoro. In questo modo ricevi un costo chiaro,
                 coerente e adatto al tuo caso specifico.
               </p>
             </div>
