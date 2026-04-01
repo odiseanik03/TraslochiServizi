@@ -74,6 +74,16 @@ const Footer = () => {
               </ul>
             </nav>
           </div>
+
+          <div style={{ animation: "slideInUp 700ms ease-out 300ms backwards" }}>
+            <h4 style={{ fontSize: "1.05rem", marginBottom: "10px", fontWeight: "700" }}>Guide utili</h4>
+            <nav aria-label="Guide utili nel footer">
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                <li style={{ fontSize: "0.9rem", marginBottom: "6px" }}><Link href="/traslochi-verona-prezzi" style={{ color: "inherit", textDecoration: "underline", textDecorationColor: "rgba(255,255,255,0.4)" }}>Traslochi Verona prezzi</Link></li>
+                <li style={{ fontSize: "0.9rem" }}><Link href="/checklist-trasloco-verona" style={{ color: "inherit", textDecoration: "underline", textDecorationColor: "rgba(255,255,255,0.4)" }}>Checklist trasloco Verona</Link></li>
+              </ul>
+            </nav>
+          </div>
         </div>
 
         {/* Divider */}
