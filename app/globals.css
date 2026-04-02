@@ -219,27 +219,16 @@ a {
 }
 
 .heroTextReveal {
-  opacity: 0;
-  animation: heroTextFadeIn 260ms ease-out forwards;
-  animation-delay: 40ms;
-  will-change: opacity;
+  opacity: 1;
 }
 
 .heroTextReveal.heroTextRevealDelayed {
-  animation-duration: 300ms;
-  animation-delay: 110ms;
-}
-
-@keyframes heroTextFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .heroTextReveal,
   .heroTextReveal.heroTextRevealDelayed {
     opacity: 1;
-    animation: none;
   }
 }
 
