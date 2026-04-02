@@ -157,21 +157,15 @@ a {
   position: relative;
   color: #fff;
   min-height: clamp(560px, 78vh, 860px);
+  background-image: url('/images/hero-image4.jpeg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
   overflow: hidden;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   padding-top: clamp(20px, 5vh, 40px);
-}
-
-.heroBgMedia {
-  position: absolute;
-  inset: 0;
-}
-
-.heroBgImage {
-  object-fit: cover;
-  object-position: top center;
 }
 
 .heroContainer {

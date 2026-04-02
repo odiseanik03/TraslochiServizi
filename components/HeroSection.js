@@ -1,5 +1,15 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.45, ease: "easeOut" } },
+};
+
+const buttonVariants = {
+  hover: { scale: 1.03, boxShadow: "0px 10px 20px rgba(0,0,0,0.22)" },
+};
 
 const WHATSAPP_PREFILL = encodeURIComponent(
   "Ciao Traslochi Servizi, vorrei un preventivo per trasloco/sgombero a Verona e zone limitrofe. Potete indicarmi disponibilità e costo? Grazie!"
@@ -7,20 +17,13 @@ const WHATSAPP_PREFILL = encodeURIComponent(
 
 const HeroSection = () => {
   return (
-    <section id="home" className="heroRoot">
-      <div className="heroBgMedia" aria-hidden="true">
-        <Image
-          src="/images/hero-image4.jpeg"
-          alt=""
-          fill
-          priority
-          fetchPriority="high"
-          quality={78}
-          sizes="100vw"
-          className="heroBgImage"
-        />
-      </div>
-
+    <motion.section
+      id="home"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className="heroRoot"
+    >
       <div
         className="heroOverlay"
         style={{
@@ -63,39 +66,48 @@ const HeroSection = () => {
 
             {/* Desktop CTAs */}
             <div className="btnRow heroCtasDesktop" style={{ marginTop: 20 }}>
-              <a href="tel:+393926900003" className="btn btnPrimary">
+              <motion.a href="tel:+393926900003" variants={buttonVariants} whileHover="hover" className="btn btnPrimary">
                 Chiama ora
-              </a>
-              <a href="#contatti" className="btn btnSecondary">
+              </motion.a>
+              <motion.a href="#contatti" variants={buttonVariants} whileHover="hover" className="btn btnSecondary">
                 Richiedi un preventivo
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href={`https://wa.me/393926900003?text=${WHATSAPP_PREFILL}`}
                 target="_blank"
                 rel="nofollow noopener noreferrer"
+                variants={buttonVariants}
+                whileHover="hover"
                 className="btn btnWhatsApp"
               >
                 Scrivici su WhatsApp
-              </a>
+              </motion.a>
             </div>
 
             {/* Mobile CTAs (2 buttons only, clean) */}
             <div className="heroCtasMobile" aria-label="Azioni rapide">
-              <a
+              <motion.a
                 href={`https://wa.me/393926900003?text=${WHATSAPP_PREFILL}`}
                 target="_blank"
                 rel="nofollow noopener noreferrer"
+                variants={buttonVariants}
+                whileHover="hover"
                 className="btn btnWhatsApp heroCtaPrimary"
               >
                 Scrivici su WhatsApp
-              </a>
-              <a href="tel:+393926900003" className="btn btnPrimary heroCtaPrimary">
+              </motion.a>
+              <motion.a href="tel:+393926900003" variants={buttonVariants} whileHover="hover" className="btn btnPrimary heroCtaPrimary">
                 Chiama ora
-              </a>
+              </motion.a>
             </div>
           </div>
 
-          <div className="heroMedia">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+            className="heroMedia"
+          >
             <div className="heroMediaInner heroMediaInnerShine heroMediaInnerPhoto">
               <Image
                 className="heroMediaImg"
@@ -110,10 +122,10 @@ const HeroSection = () => {
                 style={{ width: '100%', height: 'auto' }}
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
