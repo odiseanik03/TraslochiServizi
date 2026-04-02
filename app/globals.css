@@ -220,24 +220,26 @@ a {
 
 .heroTextReveal {
   opacity: 0;
-  transition: opacity 260ms ease-out;
+  animation: heroTextFadeIn 260ms ease-out forwards;
+  animation-delay: 40ms;
   will-change: opacity;
 }
 
 .heroTextReveal.heroTextRevealDelayed {
-  transition-duration: 300ms;
-  transition-delay: 70ms;
+  animation-duration: 300ms;
+  animation-delay: 110ms;
 }
 
-.heroTextReveal.isVisible {
-  opacity: 1;
+@keyframes heroTextFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .heroTextReveal,
   .heroTextReveal.heroTextRevealDelayed {
     opacity: 1;
-    transition: none;
+    animation: none;
   }
 }
 
@@ -611,19 +613,38 @@ a {
   align-items: center;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1024px) {
   .heroGrid {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 }
 
 /* Hero media (premium, non trasparente) */
 .heroMedia {
+  justify-self: end;
+  width: min(420px, 100%);
   border-radius: 22px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: #ffffff;
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.38);
+}
+
+@media (max-width: 1200px) {
+  .heroMedia {
+    width: min(360px, 100%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .heroCopy {
+    max-width: 760px;
+  }
+
+  .heroMedia {
+    display: none !important;
+  }
 }
 
 .heroMediaInner {
@@ -1081,10 +1102,39 @@ a {
 /* Navbar responsive - show/hide without conditional rendering */
 .siteHeader {
   position: relative !important;
+  padding-inline: 20px !important;
+}
+
+.navbarShell {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 0;
+}
+
+.navbarBrand {
+  min-width: 0;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.navbarBrandText {
+  display: block;
+  white-space: nowrap;
 }
 
 .navbarDesktop {
   display: flex !important;
+  margin-left: auto;
+  min-width: 0;
+}
+
+.navbarDesktop .navLink,
+.ctaButtonPrimary {
+  white-space: nowrap;
 }
 
 .navbarMobileToggle {
@@ -1095,7 +1145,7 @@ a {
   /* display is controlled by inline style (open/close) */
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1180px) {
   body {
     padding-top: 70px;
   }
@@ -1115,11 +1165,17 @@ a {
 
   .navbarMobileToggle {
     display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 12px;
   }
 
   .navbarMobilePanel {
     position: absolute;
-    top: 70px;
+    top: calc(100% + 1px);
     right: 0;
     left: 0;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.92) 100%);
@@ -1130,6 +1186,10 @@ a {
     box-shadow: 0 10px 26px rgba(2, 6, 23, 0.18);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    max-height: calc(100vh - 82px);
+    overflow-y: auto;
   }
 
   .navbarMobilePanel a {
@@ -1154,6 +1214,22 @@ a {
     flex: 0 !important;
     transform: rotate(90deg) !important;
   }
+}
+
+@media (max-width: 640px) {
+  .siteHeader {
+    padding-inline: 14px !important;
+  }
+
+  .navbarBrandText {
+    font-size: clamp(1rem, 5vw, 1.25rem) !important;
+  }
+}
+
+.section,
+.sectionAlt {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
 }
 
 /* Comprehensive section animations */

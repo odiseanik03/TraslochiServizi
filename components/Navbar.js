@@ -1,20 +1,31 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
-const servicePages = [
-  { href: "/traslochi-verona", label: "Traslochi" },
-  { href: "/sgomberi-verona", label: "Sgomberi" },
-  { href: "/traslochi-e-sgomberi-verona", label: "Traslochi e Sgomberi" },
-  { href: "/sgomberi-appartamenti-verona", label: "Sgomberi appartamenti" },
-  { href: "/sgombero-cantine-verona", label: "Sgombero cantine" },
-  { href: "/svuotamento-garage-verona", label: "Svuotamento garage" },
-  { href: "/svuotamento-magazzini-verona", label: "Svuotamento magazzini" },
-];
+const MOBILE_NAV_BREAKPOINT = 1180;
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > MOBILE_NAV_BREAKPOINT) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
 
   const lineVariants = {
     closed: { rotate: 0, y: 0, opacity: 1 },
@@ -44,12 +55,14 @@ const Navbar = () => {
       margin: 0,
       letterSpacing: "-0.02em",
       cursor: "pointer",
+      lineHeight: 1,
+      whiteSpace: "nowrap",
     },
     navLinks: {
       display: "flex",
       gap: "18px",
       alignItems: "center",
-      flexWrap: "wrap",
+      flexWrap: "nowrap",
       justifyContent: "flex-end",
     },
     link: {
@@ -82,7 +95,7 @@ const Navbar = () => {
     },
     mobilePanel: {
       position: "absolute",
-      top: "70px",
+      top: "calc(100% + 1px)",
       right: 0,
       left: 0,
       background: "linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.86) 100%)",
@@ -91,6 +104,10 @@ const Navbar = () => {
       flexDirection: "column",
       gap: "10px",
       boxShadow: "0 10px 26px rgba(2, 6, 23, 0.18)",
+      borderBottomLeftRadius: "18px",
+      borderBottomRightRadius: "18px",
+      maxHeight: "calc(100vh - 82px)",
+      overflowY: "auto",
     },
   };
 
@@ -107,8 +124,13 @@ const Navbar = () => {
 
   return (
     <header style={styles.header} className="siteHeader">
-      <nav style={{ display: "contents" }} aria-label="Navigazione principale">
-        <Link href="/" aria-label="Traslochi Servizi - Torna alla home" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+      <nav className="navbarShell" aria-label="Navigazione principale">
+        <Link
+          href="/"
+          aria-label="Traslochi Servizi - Torna alla home"
+          className="navbarBrand"
+          style={{ display: "inline-flex", alignItems: "center", gap: 10 }}
+        >
           <div
             aria-hidden="true"
             style={{
@@ -119,7 +141,7 @@ const Navbar = () => {
               boxShadow: "0 10px 22px rgba(176, 141, 87, 0.22)",
             }}
           />
-          <span style={styles.logo}>Traslochi Servizi</span>
+          <span style={styles.logo} className="navbarBrandText">Traslochi Servizi</span>
         </Link>
       
         {/* Desktop Menu */}
@@ -157,6 +179,7 @@ const Navbar = () => {
           style={{ display: "none", flexDirection: "column", cursor: "pointer", gap: "5px", background: "none", border: "none", padding: 0 }}
           aria-label={mobileMenuOpen ? "Chiudi menu" : "Apri menu"}
           aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-navigation-panel"
         >
           <motion.div variants={lineVariants} animate={mobileMenuOpen ? "openTop" : "closed"} style={styles.hamburgerLine} />
           <motion.div variants={lineVariants} animate={mobileMenuOpen ? "openMiddle" : "closed"} style={styles.hamburgerLine} />
@@ -167,6 +190,7 @@ const Navbar = () => {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
+              id="mobile-navigation-panel"
               className="navbarMobilePanel"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

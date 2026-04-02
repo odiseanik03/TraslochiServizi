@@ -1,5 +1,4 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -12,26 +11,11 @@ const buttonVariants = {
   hover: { scale: 1.03, boxShadow: "0px 10px 20px rgba(0,0,0,0.22)" },
 };
 
-const heroTextFade = {
-  hidden: { opacity: 0 },
-  visible: (delay = 0) => ({
-    opacity: 1,
-    transition: { duration: 0.42, ease: "easeOut", delay },
-  }),
-};
-
 const WHATSAPP_PREFILL = encodeURIComponent(
   "Ciao Traslochi Servizi, vorrei un preventivo per trasloco/sgombero a Verona e zone limitrofe. Potete indicarmi disponibilità e costo? Grazie!"
 );
 
 const HeroSection = () => {
-  const [heroTextVisible, setHeroTextVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = window.setTimeout(() => setHeroTextVisible(true), 40);
-    return () => window.clearTimeout(timer);
-  }, []);
-
   return (
     <motion.section
       id="home"
@@ -71,12 +55,12 @@ const HeroSection = () => {
         <div className="heroGrid">
           <div className="heroCopy">
             <div className="heroBadge">✓ Sempre <strong style={{ fontWeight: 900, textTransform: 'uppercase' }}>PREVENTIVO GRATUITO</strong> e prezzi onesti</div>
-            <h1 className={`heroTitle heroTextReveal ${heroTextVisible ? "isVisible" : ""}`}>
+            <h1 className="heroTitle heroTextReveal">
               Traslochi e Sgomberi
               <br />
               <span className="heroAccent heroShimmer">rapidi</span>, puliti, organizzati
             </h1>
-            <p className={`heroLead heroTextReveal heroTextRevealDelayed ${heroTextVisible ? "isVisible" : ""}`}>
+            <p className="heroLead heroTextReveal heroTextRevealDelayed">
               Sgomberi, traslochi e svuotamento cantine, soffitte e garage a Verona e provincia. Preventivi gratuiti, interventi rapidi, 7 giorni su 7.
             </p>
 
@@ -123,7 +107,6 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
             className="heroMedia"
-            style={{ justifySelf: "end", width: "min(420px, 100%)" }}
           >
             <div className="heroMediaInner heroMediaInnerShine heroMediaInnerPhoto">
               <Image
@@ -133,6 +116,7 @@ const HeroSection = () => {
                 width={420}
                 height={280}
                 priority
+                sizes="(max-width: 1024px) 0px, (max-width: 1400px) 34vw, 420px"
                 style={{ width: '100%', height: 'auto' }}
               />
             </div>

@@ -34,7 +34,7 @@ export const metadata = {
   },
 };
 
-import HomeClientOnly from "@/components/HomeClientOnly";
+import ClientApp from "@/components/ClientApp";
 
 export default function Home() {
   const homeServiceJsonLd = {
@@ -108,7 +108,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeWebPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeServiceJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqJsonLd) }} />
-      <HomeClientOnly />
+      <ClientApp />
     </>
   );
 }

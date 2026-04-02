@@ -1,19 +1,31 @@
-"use client";
-
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import DualServiceSection from "@/components/DualServiceSection";
 import Services from "@/components/Services";
-import Map from "@/components/map";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
-import ReviewsSection from "@/components/ReviewsSection";
 import ContactSection from "@/components/ContactSection";
 import CertificateSection from "@/components/CertificateSection";
 import Footer from "@/components/Footer";
-import FloatingButtons from "@/components/FloatingButtons";
 
-import BeforeAfterSection from "@/components/BeforeAfterSection";
+const Map = dynamic(() => import("@/components/map"), {
+  loading: () => <SectionPlaceholder height={520} />,
+});
+
+const BeforeAfterSection = dynamic(() => import("@/components/BeforeAfterSection"), {
+  loading: () => <SectionPlaceholder height={640} />,
+});
+
+const ReviewsSection = dynamic(() => import("@/components/ReviewsSection"), {
+  loading: () => <SectionPlaceholder height={420} />,
+});
+
+const FloatingButtons = dynamic(() => import("@/components/FloatingButtons"));
+
+function SectionPlaceholder({ height }) {
+  return <div aria-hidden="true" style={{ minHeight: height }} />;
+}
 
 export default function ClientApp() {
   return (
