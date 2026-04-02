@@ -86,6 +86,8 @@ const BeforeAfterSection = () => {
                   width={350}
                   height={263}
                   loading="lazy"
+                  quality={68}
+                  sizes="(max-width: 767px) 92vw, 350px"
                   className="baImage baBefore"
                   style={{
                     width: "100%",
@@ -153,6 +155,8 @@ const BeforeAfterSection = () => {
                   width={350}
                   height={263}
                   loading="lazy"
+                  quality={68}
+                  sizes="(max-width: 767px) 92vw, 350px"
                   className="baImage baAfter"
                   style={{
                     width: "100%",

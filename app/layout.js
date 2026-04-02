@@ -213,7 +213,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="it">
       <head>
-        <link rel="preload" href="/images/hero-image.jpeg" as="image" type="image/jpeg" />
+        <link rel="preload" href="/images/hero-image4.jpeg" as="image" type="image/jpeg" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
       </head>
       <body className={`${inter.variable} ${manrope.variable}`} style={{ position: "relative" }}>

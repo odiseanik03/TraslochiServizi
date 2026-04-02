@@ -115,7 +115,9 @@ const HeroSection = () => {
                 alt="Furgone Traslochi Servizi per traslochi e sgomberi a Verona e zone limitrofe"
                 width={420}
                 height={280}
-                priority
+                loading="lazy"
+                fetchPriority="low"
+                quality={70}
                 sizes="(max-width: 1024px) 0px, (max-width: 1400px) 34vw, 420px"
                 style={{ width: '100%', height: 'auto' }}
               />
